@@ -1,0 +1,12 @@
+SELECT 
+    ASSUNTO, 
+    ANO, 
+    COUNT(*) AS QUANTIDADE
+FROM 
+    atendimentos
+GROUP BY 
+    ASSUNTO, ANO
+HAVING 
+    COUNT(*) > 3
+ORDER BY 
+    ANO DESC, QUANTIDADE DESC;
